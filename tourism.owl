@@ -1,0 +1,1057 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#"
+     xml:base="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism">
+        <rdfs:comment>Онтология отношений в сфере туризма
+</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Включает_город -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Включает_город">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Город"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Связь"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Страна"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Включает_транспорт -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Включает_транспорт">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Город"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Доступен_в"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Связь"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Транспорт"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Доступен_в -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Доступен_в">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Город"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Связь"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Транспорт"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Имеет -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Имеет">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Гастрономические_заведения"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Город"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Достопримечательность"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Проживание"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Развлечение"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Район"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Район"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Расположен_в"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Связь"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Находится_в_стране -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Находится_в_стране">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Включает_город"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Город"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Связь"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Страна"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Расположен_в -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Расположен_в">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Гастрономические_заведения"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Город"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Достопримечательность"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Проживание"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Развлечение"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Район"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Район"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Связь"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Связь -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Связь"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Адрес_достопримечательности -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Адрес_достопримечательности">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Достопримечательность"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Адрес_заведения -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Адрес_заведения">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Гастрономические_заведения"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Адрес_мероприятия -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Адрес_мероприятия">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Развлечение"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Адрес_места_проживания -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Адрес_места_проживания">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Проживание"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Валюта -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Валюта">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Страна"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Вид_проживания -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Вид_проживания">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Проживание"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Географические_особенности -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Географические_особенности">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Город"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Дата_и_время_мероприятия -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Дата_и_время_мероприятия">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Развлечение"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Климат -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Климат">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Страна"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Необходимые_документы -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Необходимые_документы">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Страна"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Официальный_язык -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Официальный_язык">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Страна"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Парковка -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Парковка">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Проживание"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Питание -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Питание">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Проживание"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Рейтинг_достопримечательности -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Рейтинг_достопримечательности">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Достопримечательность"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Рейтинг_заведения -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Рейтинг_заведения">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Гастрономические_заведения"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Рейтинг_мероприятия -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Рейтинг_мероприятия">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Развлечение"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Рейтинг_проживания -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Рейтинг_проживания">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Проживание"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Рейтинг_района -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Рейтинг_района">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Район"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Средняя_цена_за_номер -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Средняя_цена_за_номер">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Проживание"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Средняя_цена_приема_пищи -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Средняя_цена_приема_пищи">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Гастрономические_заведения"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Тип_достопримечательности -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Тип_достопримечательности">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Достопримечательность"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Тип_заведения -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Тип_заведения">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Гастрономические_заведения"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Тип_развлечения -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Тип_развлечения">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Развлечение"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Типы_номеров -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Типы_номеров">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Проживание"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Уровень_инфраструктуры -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Уровень_инфраструктуры">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Район"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Цена_входного_билета -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Цена_входного_билета">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Достопримечательность"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Цена_мероприятия -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Цена_мероприятия">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Развлечение"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Часовой_пояс -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Часовой_пояс">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Город"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Гастрономические_заведения -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Гастрономические_заведения">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Туризм"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Город -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Город">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Туризм"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Достопримечательность -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Достопримечательность">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Туризм"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Проживание -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Проживание">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Туризм"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Развлечение -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Развлечение">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Туризм"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Район -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Район">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Туризм"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Страна -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Страна">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Туризм"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Транспорт -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Транспорт">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Туризм"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Туризм -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Туризм"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Boaz_Roof -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Boaz_Roof">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Гастрономические_заведения"/>
+        <Средняя_цена_приема_пищи rdf:datatype="&xsd;string">3 419 руб - 3 885 руб</Средняя_цена_приема_пищи>
+        <Рейтинг_заведения rdf:datatype="&xsd;int">4</Рейтинг_заведения>
+        <Адрес_заведения rdf:datatype="&xsd;string">Muallim Naci Cad. No 91. Kuruçeşme/Beşiktaş Istanb Kat:3, Besiktas 34345 Турция</Адрес_заведения>
+        <Тип_заведения rdf:datatype="&xsd;string">Ресторан</Тип_заведения>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Бешикташ"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Bourbon_&amp;_Baker -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Bourbon_&amp;_Baker">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Гастрономические_заведения"/>
+        <Средняя_цена_приема_пищи rdf:datatype="&xsd;string">2000 руб</Средняя_цена_приема_пищи>
+        <Адрес_заведения rdf:datatype="&xsd;string">312 Poyntz Ave, Манхэттен, KS 66502-6038</Адрес_заведения>
+        <Рейтинг_заведения rdf:datatype="&xsd;float">4.5</Рейтинг_заведения>
+        <Тип_заведения rdf:datatype="&xsd;string">Ресторан</Тип_заведения>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Манхэттен"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Four_Seasons_Hotel_Istanbul_at_the_Bosphorus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Four_Seasons_Hotel_Istanbul_at_the_Bosphorus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Проживание"/>
+        <Средняя_цена_за_номер rdf:datatype="&xsd;string">370 000 руб</Средняя_цена_за_номер>
+        <Рейтинг_проживания rdf:datatype="&xsd;float">9.0</Рейтинг_проживания>
+        <Адрес_места_проживания rdf:datatype="&xsd;string">Ciragan Cad. No:28, Besiktas, Стамбул</Адрес_места_проживания>
+        <Типы_номеров rdf:datatype="&xsd;string">Двухместный номер Superior
+Двухместный номер Superior
+Трёхместный номер Courtyard
+Двухместный номер Deluxe
+Двухместный полулюкс Four Seasons
+Двухместный люкс Palace Roof
+Двухместный люкс Bosphorus c 1 комнатой
+Двухместный люкс Palace Bosphorus c 1 комнатой
+</Типы_номеров>
+        <Вид_проживания rdf:datatype="&xsd;string">Отель</Вид_проживания>
+        <Парковка rdf:datatype="&xsd;string">есть</Парковка>
+        <Питание rdf:datatype="&xsd;string">нет</Питание>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Бешикташ"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Hotel_Tiflis_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Hotel_Tiflis_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Проживание"/>
+        <Адрес_места_проживания rdf:datatype="&xsd;string">29 B Marjanishvili Street, Чугурети, 0102 Тбилиси, Грузия</Адрес_места_проживания>
+        <Рейтинг_проживания rdf:datatype="&xsd;float">4,4</Рейтинг_проживания>
+        <Средняя_цена_за_номер rdf:datatype="&xsd;string">56700 руб</Средняя_цена_за_номер>
+        <Типы_номеров rdf:datatype="&xsd;string">Бюджетный двухместный номер с 1 кроватью или 2 отдельными кроватями
+Стандартный двухместный номер с 1 кроватью
+Трехместный номер
+Стандартный трехместный номер
+Семейный номер
+Семейный номер Делюкс
+Бюджетный одноместный номер
+Стандартный двухместный номер с 2 отдельными кроватями
+</Типы_номеров>
+        <Парковка rdf:datatype="&xsd;string">Есть</Парковка>
+        <Питание rdf:datatype="&xsd;string">Завтрак</Питание>
+        <Вид_проживания rdf:datatype="&xsd;string">Отель</Вид_проживания>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Чугурети"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Le_Delizie_del_Vesuvio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Le_Delizie_del_Vesuvio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Гастрономические_заведения"/>
+        <Средняя_цена_приема_пищи rdf:datatype="&xsd;string">1500-2500 руб</Средняя_цена_приема_пищи>
+        <Рейтинг_заведения rdf:datatype="&xsd;int">5</Рейтинг_заведения>
+        <Адрес_заведения rdf:datatype="&xsd;string">Via Ezio 21, 00192 Рим Италия</Адрес_заведения>
+        <Тип_заведения rdf:datatype="&xsd;string">Ресторан</Тип_заведения>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Пантеон"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Shavi_Lomi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Shavi_Lomi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Гастрономические_заведения"/>
+        <Средняя_цена_приема_пищи rdf:datatype="&xsd;string">2500 руб</Средняя_цена_приема_пищи>
+        <Рейтинг_заведения rdf:datatype="&xsd;int">4</Рейтинг_заведения>
+        <Адрес_заведения rdf:datatype="&xsd;string">Qvlividze St.,30, Тбилиси 0114 Грузия</Адрес_заведения>
+        <Тип_заведения rdf:datatype="&xsd;string">Ресторан</Тип_заведения>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Чугурети"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#The_Pantheon_Iconic_Rome_Hotel_Autograph_Collection_5* -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#The_Pantheon_Iconic_Rome_Hotel_Autograph_Collection_5*">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Проживание"/>
+        <Средняя_цена_за_номер rdf:datatype="&xsd;string">100 000 руб</Средняя_цена_за_номер>
+        <Рейтинг_проживания rdf:datatype="&xsd;float">4,5</Рейтинг_проживания>
+        <Типы_номеров rdf:datatype="&xsd;string">Classic Room 1 King Bed Non Smoking
+Standard room
+Superior Room 1 King Bed Non Smoking
+Classic Room 1 King Bed Non Smoking NON-REFUNDABLE
+Superior room
+Classic Room 1 King Bed Non Smoking
+Standard room
+Superior Room 1 King Bed Non Smoking NON-REFUNDABLE
+Superior Room 1 King Bed Non Smoking
+Superior room
+Deluxe Room 1 King Bed Non Smoking
+Deluxe
+Classic Room Guest room 1 King
+Deluxe Room 1 King Bed Non Smoking NON-REFUNDABLE
+Deluxe Room 1 King Bed Non Smoking
+Superior Room Guest room 1 King
+Deluxe
+Deluxe Room Guest room 1 King
+Junior Suite 1 Bedroom Non Smoking
+Junior suite
+Junior Suite 1 Bedroom Non Smoking NON-REFUNDABLE
+Junior Suite 1 Bedroom Non Smoking
+Junior suite
+Junior Suite 1 Bedroom Junior Suite 1 King
+Junior Suite 1 Bedroom Junior Suite 1 King
+Junior Suite 1 Bedroom Junior Suite 2 Queen
+Junior Suite 1 Bedroom Junior Suite 2 Queen
+Suite 1 Bedroom Non Smoking View
+Suite
+</Типы_номеров>
+        <Вид_проживания rdf:datatype="&xsd;string">Гостиница</Вид_проживания>
+        <Парковка rdf:datatype="&xsd;string">Есть</Парковка>
+        <Питание rdf:datatype="&xsd;string">Завтрак</Питание>
+        <Адрес_места_проживания rdf:datatype="&xsd;string">Рим, Via di Santa Chiara 4/A</Адрес_места_проживания>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Пантеон"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#The_Plaza_New_York_A_Fairmont_Managed_Hotel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#The_Plaza_New_York_A_Fairmont_Managed_Hotel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Проживание"/>
+        <Адрес_места_проживания rdf:datatype="&xsd;string">768 5th Avenue, Нью-Йорк, NY 10019, США</Адрес_места_проживания>
+        <Рейтинг_проживания rdf:datatype="&xsd;float">8,5</Рейтинг_проживания>
+        <Средняя_цена_за_номер rdf:datatype="&xsd;string">950 000</Средняя_цена_за_номер>
+        <Парковка rdf:datatype="&xsd;string">Есть</Парковка>
+        <Питание rdf:datatype="&xsd;string">Завтрак</Питание>
+        <Типы_номеров rdf:datatype="&xsd;string">Номер Делюкс с кроватью размера «king-size» 
+Номер Делюкс с кроватью размера «king-size»
+Номер Делюкс «Гранд» с кроватью размера «king-size»
+Номер &quot;Гранд Люкс&quot;
+Номер Делюкс с 2 кроватями размера «queen-size»
+Полулюкс
+Эдвардиан Люкс
+Люкс «Карнеги»
+</Типы_номеров>
+        <Вид_проживания rdf:datatype="&xsd;int">Отель</Вид_проживания>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Манхэттен"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Америка -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Америка">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Страна"/>
+        <Необходимые_документы rdf:datatype="&xsd;string">Американская виза</Необходимые_документы>
+        <Официальный_язык rdf:datatype="&xsd;string">Английский</Официальный_язык>
+        <Валюта>Доллар</Валюта>
+        <Включает_город rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Нью-Йорк"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Бешикташ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Бешикташ">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Район"/>
+        <Рейтинг_района rdf:datatype="&xsd;int">5</Рейтинг_района>
+        <Уровень_инфраструктуры rdf:datatype="&xsd;int">5</Уровень_инфраструктуры>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Boaz_Roof"/>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Four_Seasons_Hotel_Istanbul_at_the_Bosphorus"/>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Дворец_Долмабахче"/>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Стамбул"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Воздушный_транспорт -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Воздушный_транспорт">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Транспорт"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Нью-Йорк"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Рим"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сочи"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Стамбул"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Тбилиси"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Галерея_Боргезе -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Галерея_Боргезе">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Развлечение"/>
+        <Адрес_мероприятия rdf:datatype="&xsd;string">
+Лацио, Рим, вилла Боргезе</Адрес_мероприятия>
+        <Рейтинг_мероприятия rdf:datatype="&xsd;int">4,3</Рейтинг_мероприятия>
+        <Дата_и_время_мероприятия rdf:datatype="&xsd;string">9^00-19^00</Дата_и_время_мероприятия>
+        <Тип_развлечения rdf:datatype="&xsd;string">Культурное</Тип_развлечения>
+        <Цена_мероприятия rdf:datatype="&xsd;string">от 17 евро</Цена_мероприятия>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Рим"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Грузинский_театр_оперы_и_балета_им._Палиашвили -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Грузинский_театр_оперы_и_балета_им._Палиашвили">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Развлечение"/>
+        <Дата_и_время_мероприятия rdf:datatype="&xsd;string">09^00-19^00</Дата_и_время_мероприятия>
+        <Рейтинг_мероприятия rdf:datatype="&xsd;int">4,3</Рейтинг_мероприятия>
+        <Цена_мероприятия rdf:datatype="&xsd;string">8-100лари</Цена_мероприятия>
+        <Рейтинг_мероприятия rdf:datatype="&xsd;string">Культурное</Рейтинг_мероприятия>
+        <Адрес_мероприятия rdf:datatype="&xsd;string">просп. Шота Руставели, 25, Тбилиси</Адрес_мероприятия>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Тбилиси"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Грузия -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Грузия">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Страна"/>
+        <Официальный_язык rdf:datatype="&xsd;string">Грузинский</Официальный_язык>
+        <Необходимые_документы rdf:datatype="&xsd;string">Нет</Необходимые_документы>
+        <Валюта>Лари
+</Валюта>
+        <Включает_город rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Тбилиси"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Дворец_Долмабахче -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Дворец_Долмабахче">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Достопримечательность"/>
+        <Цена_входного_билета rdf:datatype="&xsd;string">450TL</Цена_входного_билета>
+        <Рейтинг_достопримечательности rdf:datatype="&xsd;int">5</Рейтинг_достопримечательности>
+        <Тип_достопримечательности rdf:datatype="&xsd;string">Историческая
+</Тип_достопримечательности>
+        <Адрес_достопримечательности rdf:datatype="&xsd;string">Стамбул, Бешикташ, махалле Вишнезаде, улица Долмабахче, 2</Адрес_достопримечательности>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Бешикташ"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Железнодорожный_транспорт -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Железнодорожный_транспорт">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Транспорт"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Нью-Йорк"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Рим"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сочи"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Стамбул"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Тбилиси"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Италия -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Италия">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Страна"/>
+        <Официальный_язык rdf:datatype="&xsd;string">Итальянский</Официальный_язык>
+        <Валюта>Евро</Валюта>
+        <Необходимые_документы>Шенгенская виза</Необходимые_документы>
+        <Включает_город rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Рим"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Крепость_Нарикала -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Крепость_Нарикала">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Достопримечательность"/>
+        <Цена_входного_билета rdf:datatype="&xsd;string">0</Цена_входного_билета>
+        <Рейтинг_достопримечательности rdf:datatype="&xsd;int">5</Рейтинг_достопримечательности>
+        <Тип_достопримечательности rdf:datatype="&xsd;string">Историческая</Тип_достопримечательности>
+        <Адрес_достопримечательности rdf:datatype="&xsd;string">Тбилиси, район Старый Тбилиси</Адрес_достопримечательности>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Чугурети"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Магеллан -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Магеллан">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Гастрономические_заведения"/>
+        <Средняя_цена_приема_пищи rdf:datatype="&xsd;string">1000-3500 руб</Средняя_цена_приема_пищи>
+        <Рейтинг_заведения rdf:datatype="&xsd;int">4</Рейтинг_заведения>
+        <Тип_заведения rdf:datatype="&xsd;string">Ресторан</Тип_заведения>
+        <Адрес_заведения rdf:datatype="&xsd;string">ул. Урицкого, 18А/2, Сириус 354349 Россия</Адрес_заведения>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сириус"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Манхэттен -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Манхэттен">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Район"/>
+        <Рейтинг_района rdf:datatype="&xsd;int">5</Рейтинг_района>
+        <Уровень_инфраструктуры rdf:datatype="&xsd;int">5</Уровень_инфраструктуры>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Bourbon_&amp;_Baker"/>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#The_Plaza_New_York_A_Fairmont_Managed_Hotel"/>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Нью-Йорк"/>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Центральный_парк"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Музей_Метрополитен -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Музей_Метрополитен">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Развлечение"/>
+        <Цена_мероприятия rdf:datatype="&xsd;string">1$</Цена_мероприятия>
+        <Дата_и_время_мероприятия rdf:datatype="&xsd;string">10^00-17^00</Дата_и_время_мероприятия>
+        <Рейтинг_мероприятия rdf:datatype="&xsd;int">4,4</Рейтинг_мероприятия>
+        <Тип_развлечения rdf:datatype="&xsd;string">Культурное</Тип_развлечения>
+        <Адрес_мероприятия rdf:datatype="&xsd;string">Нью-Йорк, Пятая авеню, 1000</Адрес_мероприятия>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Нью-Йорк"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Нью-Йорк -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Нью-Йорк">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Город"/>
+        <Часовой_пояс rdf:datatype="&xsd;string">UTC-5</Часовой_пояс>
+        <Географические_особенности rdf:datatype="&xsd;string">Берег океана</Географические_особенности>
+        <Климат rdf:datatype="&xsd;string">Влажный субтропический с жарким летом</Климат>
+        <Находится_в_стране rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Америка"/>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Воздушный_транспорт"/>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Железнодорожный_транспорт"/>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Манхэттен"/>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Общественный_транспорт"/>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Прокат_автомобилей"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Общественный_транспорт -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Общественный_транспорт">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Транспорт"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Нью-Йорк"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Рим"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сочи"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Стамбул"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Тбилиси"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Олимпийский_парк -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Олимпийский_парк">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Достопримечательность"/>
+        <Цена_входного_билета rdf:datatype="&xsd;string">0</Цена_входного_билета>
+        <Рейтинг_достопримечательности rdf:datatype="&xsd;float">4,9</Рейтинг_достопримечательности>
+        <Тип_достопримечательности rdf:datatype="&xsd;string">Историческая</Тип_достопримечательности>
+        <Адрес_достопримечательности rdf:datatype="&xsd;string">Краснодарский край, Природный орнитологический парк в Имеретинской низменности</Адрес_достопримечательности>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сириус"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Памятник_Пантеон -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Памятник_Пантеон">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Достопримечательность"/>
+        <Рейтинг_достопримечательности rdf:datatype="&xsd;float">4,7</Рейтинг_достопримечательности>
+        <Цена_входного_билета rdf:datatype="&xsd;string">5 евро</Цена_входного_билета>
+        <Тип_достопримечательности rdf:datatype="&xsd;string">Историческая</Тип_достопримечательности>
+        <Адрес_достопримечательности rdf:datatype="&xsd;string">ул. делла Ротонда, 19, Рим</Адрес_достопримечательности>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Пантеон"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Пантеон -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Пантеон">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Район"/>
+        <Рейтинг_района rdf:datatype="&xsd;int">5</Рейтинг_района>
+        <Уровень_инфраструктуры rdf:datatype="&xsd;int">5</Уровень_инфраструктуры>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Le_Delizie_del_Vesuvio"/>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#The_Pantheon_Iconic_Rome_Hotel_Autograph_Collection_5*"/>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Памятник_Пантеон"/>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Рим"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Прокат_автомобилей -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Прокат_автомобилей">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Транспорт"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Нью-Йорк"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Рим"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сочи"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Стамбул"/>
+        <Доступен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Тбилиси"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Рим -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Рим">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Город"/>
+        <Часовой_пояс rdf:datatype="&xsd;string">UTC +1</Часовой_пояс>
+        <Климат rdf:datatype="&xsd;string">Субтропический средиземноморский</Климат>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Воздушный_транспорт"/>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Железнодорожный_транспорт"/>
+        <Находится_в_стране rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Италия"/>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Общественный_транспорт"/>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Пантеон"/>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Прокат_автомобилей"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Россия -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Россия">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Страна"/>
+        <Официальный_язык rdf:datatype="&xsd;string">Русский</Официальный_язык>
+        <Валюта>Рубль</Валюта>
+        <Необходимые_документы>Нет</Необходимые_документы>
+        <Включает_город rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сочи"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сириус -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сириус">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Район"/>
+        <Уровень_инфраструктуры rdf:datatype="&xsd;int">4</Уровень_инфраструктуры>
+        <Рейтинг_района rdf:datatype="&xsd;int">5</Рейтинг_района>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Магеллан"/>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Олимпийский_парк"/>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сочи"/>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сочи_Парк_Отель_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сочи -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сочи">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Город"/>
+        <Климат rdf:datatype="&xsd;string">Cубтропический , с тёплой дождливой зимой и влажным, но солнечным летом</Климат>
+        <Часовой_пояс rdf:datatype="&xsd;string">UTC +3</Часовой_пояс>
+        <Географические_особенности rdf:datatype="&xsd;string">Берег моря</Географические_особенности>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Воздушный_транспорт"/>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Железнодорожный_транспорт"/>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Общественный_транспорт"/>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Прокат_автомобилей"/>
+        <Находится_в_стране rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Россия"/>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сириус"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сочи_Парк_Отель_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сочи_Парк_Отель_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Проживание"/>
+        <Средняя_цена_за_номер rdf:datatype="&xsd;string">10700 руб</Средняя_цена_за_номер>
+        <Типы_номеров rdf:datatype="&xsd;string">2-х местный стандарт
+2х местный стандарт с одной кроватью
+стандарт (для маломобильных граждан)
+Стандарт улучшенный
+Люкс 2-х комнатный
+Апартаменты трехкомнатные с кухней
+</Типы_номеров>
+        <Рейтинг_проживания rdf:datatype="&xsd;float">4,6</Рейтинг_проживания>
+        <Парковка rdf:datatype="&xsd;string">Есть</Парковка>
+        <Питание rdf:datatype="&xsd;string">Завтрак,обед,ужин</Питание>
+        <Вид_проживания rdf:datatype="&xsd;string">Отель</Вид_проживания>
+        <Адрес_места_проживания rdf:datatype="&xsd;string">посёлок городского типа Сириус, Континентальный проспект, 6, корп. 10</Адрес_места_проживания>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сириус"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сочи_парк -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сочи_парк">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Развлечение"/>
+        <Дата_и_время_мероприятия rdf:datatype="&xsd;string">10:00-22:00</Дата_и_время_мероприятия>
+        <Цена_мероприятия rdf:datatype="&xsd;string">1500 руб</Цена_мероприятия>
+        <Рейтинг_мероприятия rdf:datatype="&xsd;int">5</Рейтинг_мероприятия>
+        <Тип_развлечения rdf:datatype="&xsd;string">Активное</Тип_развлечения>
+        <Адрес_мероприятия rdf:datatype="&xsd;string">посёлок городского типа Сириус, Тематический парк Сочи-Парк</Адрес_мероприятия>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Сочи"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Стамбул -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Стамбул">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Город"/>
+        <Часовой_пояс rdf:datatype="&xsd;string">UTC +3</Часовой_пояс>
+        <Географические_особенности rdf:datatype="&xsd;string">Берег моря</Географические_особенности>
+        <Климат rdf:datatype="&xsd;string">Переходный умеренный океанический климат</Климат>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Бешикташ"/>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Воздушный_транспорт"/>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Железнодорожный_транспорт"/>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Общественный_транспорт"/>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Прокат_автомобилей"/>
+        <Находится_в_стране rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Турция"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Стамбульский_археологический_музей -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Стамбульский_археологический_музей">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Развлечение"/>
+        <Адрес_мероприятия rdf:datatype="&xsd;string">
+Стамбул, Фатих, махалле Джанкуртаран, улица Осман Хамдибей Йокушу, 1/2
+</Адрес_мероприятия>
+        <Дата_и_время_мероприятия rdf:datatype="&xsd;string">09^00-18^00</Дата_и_время_мероприятия>
+        <Цена_мероприятия rdf:datatype="&xsd;string">200 TL</Цена_мероприятия>
+        <Рейтинг_мероприятия rdf:datatype="&xsd;int">4,4</Рейтинг_мероприятия>
+        <Тип_развлечения rdf:datatype="&xsd;string">Культурное</Тип_развлечения>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Стамбул"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Тбилиси -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Тбилиси">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Город"/>
+        <Часовой_пояс rdf:datatype="&xsd;string">UTC +4</Часовой_пояс>
+        <Климат rdf:datatype="&xsd;string">Влажный субтропический, с продолжительным жарким летом, короткой тёплой весной и мягкой, но относительно сухой зимой</Климат>
+        <Географические_особенности rdf:datatype="&xsd;string">Горы</Географические_особенности>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Воздушный_транспорт"/>
+        <Находится_в_стране rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Грузия"/>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Железнодорожный_транспорт"/>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Общественный_транспорт"/>
+        <Включает_транспорт rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Прокат_автомобилей"/>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Чугурети"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Турция -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Турция">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Страна"/>
+        <Официальный_язык rdf:datatype="&xsd;string">Турецкий</Официальный_язык>
+        <Валюта>Турецкая лира</Валюта>
+        <Необходимые_документы>Нет</Необходимые_документы>
+        <Включает_город rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Стамбул"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Центральный_парк -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Центральный_парк">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Достопримечательность"/>
+        <Цена_входного_билета rdf:datatype="&xsd;string">0</Цена_входного_билета>
+        <Рейтинг_достопримечательности rdf:datatype="&xsd;float">4,5</Рейтинг_достопримечательности>
+        <Тип_достопримечательности rdf:datatype="&xsd;string">Историческая</Тип_достопримечательности>
+        <Адрес_достопримечательности rdf:datatype="&xsd;string">штат Нью-Йорк, Нью-Йоркский центральный парк</Адрес_достопримечательности>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Манхэттен"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Чугурети -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Чугурети">
+        <rdf:type rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Район"/>
+        <Уровень_инфраструктуры rdf:datatype="&xsd;int">5</Уровень_инфраструктуры>
+        <Рейтинг_района rdf:datatype="&xsd;int">5</Рейтинг_района>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Hotel_Tiflis_3"/>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Shavi_Lomi"/>
+        <Имеет rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Крепость_Нарикала"/>
+        <Расположен_в rdf:resource="http://www.semanticweb.org/кристина/ontologies/2023/11/tourism#Тбилиси"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
